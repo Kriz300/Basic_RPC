@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package search;
+
+service Search{
+	rpc GetServerResponse(SearchRequest) returns (SearchResult) {}
+}
+
+message SearchRequest {
+	string message = 1;
+}
+
+message SearchResult {
+	repeated Product product = 1;
+}
+
+message Product {
+	string Nombre = 1;
+	int32 Precio = 2;
+	int32 Cantidad = 3;
+}
