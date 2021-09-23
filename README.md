@@ -2,7 +2,18 @@
 
 _Este proyecto es un ejemplo basico del uso de RCP._
 
-### Consideraciones de Ejecución 🔧
+## Consideraciones de Ejecución 🔧
+
+### Ejecución
+
+**Comandos:**
+```
+$ python server.py
+```
+En caso de tener más de una versión de python usar
+```
+$ python3 server.py
+```
 
 Si no se ejecuta correstamente revise que tenga instalado Python 3.8+ y la ultima versión de Redis disponible. A continuación se dejan algunos comandos que podrian ser de utilidad.
 
@@ -28,6 +39,11 @@ $ sudo systemctl restart redis.service
 $ sudo systemctl status redis
 $ sudo apt update && sudo apt upgrade -y
 ```
+### Configuración de Redis(Cache)
+
+* Memoria maxima: 1mb.
+* Politica: maxmemory-policy allkeys-lru. 
+* Al reiniciar se elimina todo el cache.
 
 ## Construido con 🛠️
 
